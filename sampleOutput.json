@@ -1,8 +1,8 @@
-import React, { Component } from 'react'
-import NewsItem from './NewsItem.js'
-export class News extends Component {
+{
 
-    articles=[
+    "status": "ok",
+    "totalResults": 217,
+    "articles": [
         
         {
             
@@ -1412,35 +1412,5 @@ export class News extends Component {
             "content": "<ul><li>První studie pro ovládání poítae pomocí mozku má ji ti spokojené úastníky</li><li>Jeden z nich nyní vstoupí do dalí fáze, kdy bude moci ovládat i robotická zaízení </li><li>Alex je po automob… [+2002 chars]"
         }
     ]
-    constructor(){
-        super();
-        console.log("hello");
-        this.state={
-            articles: this.articles,
-            loading: false
-        }
-    }
-  render() {
-    
-    return (
-      <div className="container my-3">
-        
-        <div className="row">
-        {this.state.articles.map((element)=>{
-          return <div className="col-md-4" key={element.url}>
-            <NewsItem 
-            title={element.title ? element.title.slice(0, 45) + "..." : ""} 
-            description={element.description ? element.description.slice(0, 88) + "..." : ""}
-            imageUrl={element.urlToImage}
-            newsUrl={element.url}
-        />
-          </div>
-        })}
-        </div>
-        
-      </div>
-    )
-  }
-}
 
-export default News
+}
